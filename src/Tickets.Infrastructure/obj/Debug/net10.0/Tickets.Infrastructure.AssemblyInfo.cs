@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tickets.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+118aa3e063b485c3d3986616982f058fa3fb4437")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebf3151b896670b0ba87733ce862d48a80ff60fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tickets.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tickets.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

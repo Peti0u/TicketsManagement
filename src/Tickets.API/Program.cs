@@ -1,23 +1,31 @@
 using Microsoft.EntityFrameworkCore;
-
+using Tickets.Api.Endpoints;
+using Tickets.Application.Interfaces;
+using Tickets.Infrastructure.Data;
+using Tickets.Infrastructure.Repositories;
+using Tickets.Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 
-// // Connexion SQL Server
-// builder.Services.AddDbContext<AppDbContext>(options =>
-//     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// DbContext — Scoped by default via AddDbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+ options.UseSqlServer(
+ builder.Configuration
+ .GetConnectionString("DefaultConnection"))
+);
 
+// DI registrations — all Scoped
+builder.Services.AddScoped<ITicketsRepository,
+                          TicketsRepository>();
+builder.Services.AddScoped<ITicketsService,
+                          TicketsService>();
 
 var app = builder.Build();
 
+app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
 
-// --- 3. LES ENDPOINTS ---
-
-// Message de bienvenue sur localhost:XXXX/
-app.MapGet("/", () => "L'API de Gestion de Tickets est en ligne ! Rendez-vous sur /swagger pour tester.");
-
-
+app.MapTicketsEndpoints();
 
 app.Run();

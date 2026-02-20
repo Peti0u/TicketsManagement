@@ -1,4 +1,4 @@
-namespace Ticket.Application.dtos;
+namespace Tickets.Application.dtos;
 
 public record TicketDto (
     int Id,

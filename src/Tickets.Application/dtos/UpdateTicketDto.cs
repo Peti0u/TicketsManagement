@@ -1,3 +1,5 @@
+namespace Tickets.Application.dtos;
+
 public record UpdateTicketDto (
     string Username,
     string Object,
