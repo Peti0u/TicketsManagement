@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J+FWZg6JNoQ=",
+  "dgSpecHash": "q/F57I5meLg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Quent\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Quent\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

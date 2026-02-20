@@ -9,3 +9,15 @@ C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\Tickets.Domain\obj\Debug\net10.0\
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\Tickets.Domain\obj\Debug\net10.0\refint\Tickets.Domain.dll
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\Tickets.Domain\obj\Debug\net10.0\Tickets.Domain.pdb
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\Tickets.Domain\obj\Debug\net10.0\ref\Tickets.Domain.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\bin\Debug\net10.0\Tickets.Domain.deps.json
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\bin\Debug\net10.0\Tickets.Domain.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\bin\Debug\net10.0\Tickets.Domain.pdb
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\obj\Debug\net10.0\Tickets.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\obj\Debug\net10.0\Tickets.Domain.AssemblyInfoInputs.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\obj\Debug\net10.0\Tickets.Domain.AssemblyInfo.cs
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\obj\Debug\net10.0\Tickets.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\obj\Debug\net10.0\Tickets.Domain.sourcelink.json
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\obj\Debug\net10.0\Tickets.Domain.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\obj\Debug\net10.0\refint\Tickets.Domain.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\obj\Debug\net10.0\Tickets.Domain.pdb
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\Tickets.Domain\obj\Debug\net10.0\ref\Tickets.Domain.dll
