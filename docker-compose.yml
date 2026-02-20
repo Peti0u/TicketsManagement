@@ -7,4 +7,8 @@ services:
     environment:
       - ACCEPT_EULA=Y
       - MSSQL_SA_PASSWORD=Estiam2026*
+<<<<<<< HEAD
     restart: always
+=======
+    restart: always
+>>>>>>> b4a9ee16b8175a0f48ff42a1fff6e3e559ee8807
