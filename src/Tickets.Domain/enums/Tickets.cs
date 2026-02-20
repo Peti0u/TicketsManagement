@@ -1,0 +1,1 @@
+namespace Tickets.Domain.enums;
