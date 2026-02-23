@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Tickets.Application\Tickets.Application.csproj" />
     <ProjectReference Include="..\ServiceRequest.Domain\ServiceRequest.Domain.csproj" />
     <ProjectReference Include="..\ServiceRequest.Application\ServiceRequest.Application.csproj" />
   </ItemGroup>

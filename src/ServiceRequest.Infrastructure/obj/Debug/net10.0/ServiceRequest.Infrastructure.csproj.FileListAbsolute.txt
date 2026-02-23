@@ -1,9 +1,3 @@
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.csproj.AssemblyReference.cache
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.AssemblyInfo.cs
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.sourcelink.json
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\bin\Debug\net10.0\Microsoft.Azure.Cosmos.ServiceInterop.dll
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\bin\Debug\net10.0\Cosmos.CRTCompat.dll
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\bin\Debug\net10.0\msvcp140.dll
@@ -17,6 +11,12 @@ C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\bin\Debug\net10.0\ServiceRequest.Domain.dll
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\bin\Debug\net10.0\ServiceRequest.Domain.pdb
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\bin\Debug\net10.0\ServiceRequest.Application.pdb
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.AssemblyInfo.cs
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.sourcelink.json
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceR.EE723EE3.Up2Date
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\ServiceRequest.Infrastructure.dll
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Infrastructure\obj\Debug\net10.0\refint\ServiceRequest.Infrastructure.dll
