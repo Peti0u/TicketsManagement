@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.API\\Tickets.API.csproj": {}
+    "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.API\\Tickets.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.API\\Tickets.API.csproj": {
+    "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.API\\Tickets.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.API\\Tickets.API.csproj",
+        "projectUniqueName": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.API\\Tickets.API.csproj",
         "projectName": "Tickets.API",
-        "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.API\\Tickets.API.csproj",
-        "packagesPath": "C:\\Users\\Quent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.API\\obj\\",
+        "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.API\\Tickets.API.csproj",
+        "packagesPath": "C:\\Users\\mathis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Quent\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mathis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj"
+              "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj"
               },
-              "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Service\\Tickets.Service.csproj": {
-                "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Service\\Tickets.Service.csproj"
+              "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Service\\Tickets.Service.csproj": {
+                "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Service\\Tickets.Service.csproj"
               }
             }
           }
@@ -499,21 +495,17 @@
         }
       }
     },
-    "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Application\\Tickets.Application.csproj": {
+    "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Application\\Tickets.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Application\\Tickets.Application.csproj",
+        "projectUniqueName": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Application\\Tickets.Application.csproj",
         "projectName": "Tickets.Application",
-        "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Application\\Tickets.Application.csproj",
-        "packagesPath": "C:\\Users\\Quent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Application\\obj\\",
+        "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Application\\Tickets.Application.csproj",
+        "packagesPath": "C:\\Users\\mathis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Quent\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mathis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -527,8 +519,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Domain\\Tickets.Domain.csproj": {
-                "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Domain\\Tickets.Domain.csproj"
+              "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Domain\\Tickets.Domain.csproj": {
+                "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Domain\\Tickets.Domain.csproj"
               }
             }
           }
@@ -842,21 +834,17 @@
         }
       }
     },
-    "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Domain\\Tickets.Domain.csproj": {
+    "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Domain\\Tickets.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Domain\\Tickets.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Domain\\Tickets.Domain.csproj",
         "projectName": "Tickets.Domain",
-        "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Domain\\Tickets.Domain.csproj",
-        "packagesPath": "C:\\Users\\Quent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Domain\\obj\\",
+        "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Domain\\Tickets.Domain.csproj",
+        "packagesPath": "C:\\Users\\mathis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Quent\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mathis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -1181,21 +1169,17 @@
         }
       }
     },
-    "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj": {
+    "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj",
         "projectName": "Tickets.Infrastructure",
-        "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Quent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Infrastructure\\Tickets.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mathis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Quent\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mathis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -1209,8 +1193,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Application\\Tickets.Application.csproj": {
-                "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Application\\Tickets.Application.csproj"
+              "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Application\\Tickets.Application.csproj": {
+                "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Application\\Tickets.Application.csproj"
               }
             }
           }
@@ -1546,21 +1530,17 @@
         }
       }
     },
-    "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Service\\Tickets.Service.csproj": {
+    "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Service\\Tickets.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Service\\Tickets.Service.csproj",
+        "projectUniqueName": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Service\\Tickets.Service.csproj",
         "projectName": "Tickets.Service",
-        "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Service\\Tickets.Service.csproj",
-        "packagesPath": "C:\\Users\\Quent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Service\\obj\\",
+        "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Service\\Tickets.Service.csproj",
+        "packagesPath": "C:\\Users\\mathis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Quent\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mathis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -1574,8 +1554,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Application\\Tickets.Application.csproj": {
-                "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\Tickets.Application\\Tickets.Application.csproj"
+              "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Application\\Tickets.Application.csproj": {
+                "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\Tickets.Application\\Tickets.Application.csproj"
               }
             }
           }
