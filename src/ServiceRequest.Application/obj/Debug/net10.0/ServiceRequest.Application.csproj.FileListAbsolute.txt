@@ -1,0 +1,16 @@
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\bin\Debug\net10.0\ServiceRequest.Application.deps.json
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\bin\Debug\net10.0\ServiceRequest.Application.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\bin\Debug\net10.0\ServiceRequest.Application.pdb
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\bin\Debug\net10.0\ServiceRequest.Domain.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\bin\Debug\net10.0\ServiceRequest.Domain.pdb
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ServiceRequest.Application.csproj.AssemblyReference.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ServiceRequest.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ServiceRequest.Application.AssemblyInfoInputs.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ServiceRequest.Application.AssemblyInfo.cs
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ServiceRequest.Application.csproj.CoreCompileInputs.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ServiceRequest.Application.sourcelink.json
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ServiceR.9755D423.Up2Date
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ServiceRequest.Application.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\refint\ServiceRequest.Application.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ServiceRequest.Application.pdb
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Application\obj\Debug\net10.0\ref\ServiceRequest.Application.dll

@@ -1,0 +1,12 @@
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\bin\Debug\net10.0\ServiceRequest.Domain.deps.json
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\bin\Debug\net10.0\ServiceRequest.Domain.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\bin\Debug\net10.0\ServiceRequest.Domain.pdb
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\obj\Debug\net10.0\ServiceRequest.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\obj\Debug\net10.0\ServiceRequest.Domain.AssemblyInfoInputs.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\obj\Debug\net10.0\ServiceRequest.Domain.AssemblyInfo.cs
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\obj\Debug\net10.0\ServiceRequest.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\obj\Debug\net10.0\ServiceRequest.Domain.sourcelink.json
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\obj\Debug\net10.0\ServiceRequest.Domain.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\obj\Debug\net10.0\refint\ServiceRequest.Domain.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\obj\Debug\net10.0\ServiceRequest.Domain.pdb
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.Domain\obj\Debug\net10.0\ref\ServiceRequest.Domain.dll

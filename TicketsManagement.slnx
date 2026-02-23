@@ -1,8 +1,9 @@
 <Solution>
-  <Project Path="Tickets.API/Tickets.API.csproj" />
-  <Project Path="Tickets.Application/Tickets.Application.csproj" />
-  <Project Path="Tickets.Client/Tickets.Client.csproj" />
-  <Project Path="Tickets.Domain/Tickets.Domain.csproj" />
-  <Project Path="Tickets.Infrastructure/Tickets.Infrastructure.csproj" />
-  <Project Path="Tickets.Service/Tickets.Service.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/ServiceRequest.API/ServiceRequest.API.csproj" />
+    <Project Path="src/ServiceRequest.Application/ServiceRequest.Application.csproj" />
+    <Project Path="src/ServiceRequest.Domain/ServiceRequest.Domain.csproj" />
+    <Project Path="src/ServiceRequest.Infrastructure/ServiceRequest.Infrastructure.csproj" />
+    <Project Path="src/ServiceRequest.Service/ServiceRequest.Service.csproj" />
+  </Folder>
 </Solution>

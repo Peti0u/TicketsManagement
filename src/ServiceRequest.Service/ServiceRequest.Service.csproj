@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tickets.Application\Tickets.Application.csproj" />
+    <ProjectReference Include="..\ServiceRequest.Domain\ServiceRequest.Domain.csproj" />
+    <ProjectReference Include="..\ServiceRequest.Application\ServiceRequest.Application.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
