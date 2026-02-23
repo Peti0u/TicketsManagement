@@ -1,7 +1,7 @@
 using Tickets.Application.dtos;
 using Tickets.Application.interfaces;
 
-namespace Tickets.Api.Endpoints;
+namespace Tickets.Api.endpoints;
 
 public static class TicketsEndpoints
 {
@@ -19,22 +19,16 @@ public static class TicketsEndpoints
             return item == null ? Results.NotFound() : Results.Ok(item);
         });
 
-        app.MapPost("/api/Tickets", async (CreateTicketDto dto, ITicketsService service) =>
+        app.MapPost("/tickets", async (CreateTicketsDto dto, ITicketsService service) =>
         {
             var (ok, error, created) = await service.CreateAsync(dto);
-            if (!ok) return Results.BadRequest(new { error });
-            return Results.Created($"/api/Tickets/{created!.Id}", created);
+            return ok ? Results.Created($"/tickets/{created!.Id}", created) : Results.BadRequest(error);
         });
 
-        app.MapPut("/api/Tickets/{id:int}", async (int id, UpdateTicketDto dto, ITicketsService service) =>
+        app.MapPut("/tickets/{id}", async (int id, UpdateTicketsDto dto, ITicketsService service) =>
         {
             var (ok, error, updated) = await service.UpdateAsync(id, dto);
-            if (!ok)
-            {
-                if (error == "Not found.") return Results.NotFound();
-                return Results.BadRequest(new { error });
-            }
-            return Results.Ok(updated);
+            return ok ? Results.Ok(updated) : Results.BadRequest(error);
         });
 
         app.MapDelete("/api/Tickets/{id:int}", async (int id, ITicketsService service) =>

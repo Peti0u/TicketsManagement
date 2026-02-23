@@ -3,47 +3,43 @@ using Tickets.Application.interfaces;
 using Tickets.Domain.entities;
 using Tickets.Infrastructure.data;
 
-namespace Tickets.Infrastructure.Repositories;
+namespace Tickets.Infrastructure.repositories;
 
-public class Class1 : ITicketsRepository
+public class TicketsRepository : ITicketsRepository
 {
-    private readonly AppDbContext _db;
-    public TicketsRepository(AppDbContext db) => _db = db;
-    public async Task<List<Tickets>> GetAllAsync()
-           => await _db.Ticketss
-                    .OrderByDescending(r => r.CreatedAt)
-                    .ToListAsync();
-    public async Task<Tickets?> GetByIdAsync(int id)
-           => await _db.Ticketss.FindAsync(id);
+    private readonly AppDbContext _context;
 
-    public async Task<Tickets> AddAsync(Tickets request)
+    // Le nom doit être EXACTEMENT celui de la classe
+    public TicketsRepository(AppDbContext context) 
     {
-        _db.Ticketss.Add(request);
-        await _db.SaveChangesAsync();
-        return request;
+        _context = context;
     }
 
-    public async Task<Tickets?> UpdateAsync(
-       Tickets request)
+    public async Task<List<Ticket>> GetAllAsync() => await _context.Tickets.ToListAsync();
+
+    public async Task<Ticket?> GetByIdAsync(int id) => await _context.Tickets.FindAsync(id);
+
+    public async Task<Ticket> AddAsync(Ticket ticket)
     {
-        var existing = await _db.Ticketss
-                      .FindAsync(request.Id);
-        if (existing == null) return null;
-        existing.Title = request.Title;
-        existing.Description = request.Description;
-        existing.Status = request.Status;
-        existing.CompletedAt = request.CompletedAt;
-        await _db.SaveChangesAsync();
-        return existing;
+        _context.Tickets.Add(ticket);
+        await _context.SaveChangesAsync();
+        return ticket;
     }
 
-    public async Task<bool> DeleteAsync(int id)
+    public async Task<Ticket> UpdateAsync(Ticket ticket)
     {
-        var existing = await _db.Ticketss
-            .FindAsync(id);
-        if (existing == null) return false;
-        _db.Ticketss.Remove(existing);
-        await _db.SaveChangesAsync();
-        return true;
+        _context.Tickets.Update(ticket);
+        await _context.SaveChangesAsync();
+        return ticket;
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        var ticket = await GetByIdAsync(id);
+        if (ticket != null)
+        {
+            _context.Tickets.Remove(ticket);
+            await _context.SaveChangesAsync();
+        }
     }
 }

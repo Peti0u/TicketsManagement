@@ -1,84 +1,63 @@
-using Tickets.Application.dtos;
 using Tickets.Application.interfaces;
-using Tickets.Application.validation;
+using Tickets.Application.dtos;
 using Tickets.Domain.entities;
-using Tickets.Domain.enums;
 
-namespace Tickets.Service;
+namespace Tickets.Service.services;
 
-public class Class1 : ITicketsService
+// 1. Assure-toi que le nom de la classe est TicketsService (pas Class1)
+public class TicketsService : ITicketsService
 {
-    private readonly ITicketsRepository _repo;
+    private readonly ITicketsRepository _repository;
 
-    public TicketsService(
-    ITicketsRepository repo) => _repo = repo;
+    public TicketsService(ITicketsRepository repository)
+    {
+        _repository = repository;
+    }
 
     public async Task<List<TicketsDto>> GetAllAsync()
     {
-        var items = await _repo.GetAllAsync();
-        return items.Select(ToDto).ToList();
+        var tickets = await _repository.GetAllAsync();
+        return tickets.Select(t => new TicketsDto(t.Id, t.Title, t.Description, t.Status)).ToList();
     }
 
-    public async Task<TicketsDto?>
-    GetByIdAsync(int id)
+    public async Task<TicketsDto?> GetByIdAsync(int id)
     {
-        var item = await _repo.GetByIdAsync(id);
-        return item == null ? null : ToDto(item);
+        var t = await _repository.GetByIdAsync(id);
+        return t == null ? null : new TicketsDto(t.Id, t.Title, t.Description, t.Status);
     }
 
-    public async Task<(bool ok, string error,
-       TicketsDto? created)>
-       CreateAsync(CreateTicketsDto dto)
+    // 2. Les noms Ok, Error, Created doivent être EXACTEMENT les mêmes que dans l'interface
+    public async Task<(bool Ok, string Error, TicketsDto? Created)> CreateAsync(CreateTicketsDto dto)
     {
-        var (ok, error) =
-            TicketsValidators.Validate(dto);
-        if (!ok) return (false, error, null);
+        if (string.IsNullOrWhiteSpace(dto.Title))
+            return (false, "Le titre est requis", null);
 
-        var entity = new Tickets
-        {
-            Title = dto.Title.Trim(),
-            Description = dto.Description.Trim(),
-            Status = RequestStatus.Open
-        };
+        var ticket = new Ticket { Title = dto.Title, Description = dto.Description };
+        await _repository.AddAsync(ticket);
 
-        var created = await _repo.AddAsync(entity);
-        return (true, "", ToDto(created));
+        var result = new TicketsDto(ticket.Id, ticket.Title, ticket.Description, ticket.Status);
+        return (true, string.Empty, result);
     }
 
-    public async Task<(bool ok, string error, TicketsDto? updated)>UpdateAsync(int id, UpdateTicketsDto dto)
+    // 3. Idem ici : Ok, Error, Updated
+    public async Task<(bool Ok, string Error, TicketsDto? Updated)> UpdateAsync(int id, UpdateTicketsDto dto)
     {
-        var (ok, error) =
-        TicketsValidators.Validate(dto);
-        if (!ok) return (false, error, null);
+        var ticket = await _repository.GetByIdAsync(id);
+        if (ticket == null) return (false, "Ticket introuvable", null);
 
-        var existing = await _repo.GetByIdAsync(id);
-        if (existing == null)
-            return (false, "Not found.", null);
+        ticket.Title = dto.Title;
+        ticket.Description = dto.Description;
+        await _repository.UpdateAsync(ticket);
 
-        existing.Title = dto.Title.Trim();
-        existing.Description = dto.Description.Trim();
-        existing.Status = (RequestStatus)dto.Status;
-
-        if (existing.Status == RequestStatus.Completed && existing.CompletedAt == null)
-            existing.CompletedAt = DateTime.UtcNow;
-
-        if (existing.Status != RequestStatus.Completed)
-            existing.CompletedAt = null;
-
-        var updated = await _repo.UpdateAsync(existing);
-        return updated == null ? (false, "Update failed.", null) : (true, "", ToDto(updated));
+        var result = new TicketsDto(ticket.Id, ticket.Title, ticket.Description, ticket.Status);
+        return (true, string.Empty, result);
     }
 
     public async Task<bool> DeleteAsync(int id)
-       => await _repo.DeleteAsync(id);
-
-    private static TicketsDto ToDto(Tickets e)
-        => new TicketsDto(
-            e.Id,
-            e.Title,
-            e.Description,
-            (int)e.Status,
-            e.CreatedAt,
-            e.CompletedAt
-        );
+    {
+        var ticket = await _repository.GetByIdAsync(id);
+        if (ticket == null) return false;
+        await _repository.DeleteAsync(id);
+        return true;
+    }
 }

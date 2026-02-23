@@ -1,10 +1,12 @@
-using Tickets.Domain.entities;
+using Tickets.Domain.entities; // Cette ligne doit correspondre au namespace de ton entité
+
 namespace Tickets.Application.interfaces;
+
 public interface ITicketsRepository
 {
-    Task<List<Tickets>>  GetAllAsync();         // R.etrieve (R) from C.R.U.D
-    Task<Tickets?>       GetByIdAsync(int id);  // GUID R.etrieve (R) from C.R.U.D 
-    Task<Tickets>        AddAsync(Tickets request); // C.reate (C).R.U.D 
-    Task<Tickets?>       UpdateAsync(Tickets request); //U.pdate(U) C.R.U.D 
-    Task<bool>                  DeleteAsync(int id);                 //D.elete(D) C.R.U.D 
+    Task<List<Ticket>> GetAllAsync();
+    Task<Ticket?> GetByIdAsync(int id);
+    Task<Ticket> AddAsync(Ticket ticket);
+    Task<Ticket> UpdateAsync(Ticket ticket);
+    Task DeleteAsync(int id);
 }

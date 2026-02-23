@@ -1,11 +1,7 @@
 namespace Tickets.Application.dtos;
 
-public record TicketDto (
-    int Id,
-    string Username,
-    string Object,
-    string Content,
-    int Priority,
-    int Status,
-    DateTimeOffset? CreatedAt
-);
+public record TicketsDto(int Id, string Title, string Description, string Status);
+
+public record CreateTicketsDto(string Title, string Description);
+
+public record UpdateTicketsDto(string Title, string Description);
