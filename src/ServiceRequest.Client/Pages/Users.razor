@@ -2,43 +2,137 @@
 @inject HttpClient Http
 @using ServiceRequest.Application.Dtos
 
-<h3>Gestion des Users</h3>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="text-primary"><i class="bi bi-people-fill"></i> Gestion des Utilisateurs</h3>
+        <span class="badge bg-secondary">@(usersList?.Count ?? 0) Utilisateurs au total</span>
+    </div>
 
-@* Formulaire d'ajout
-<div class="mb-4">
-    <input @bind="newUserTitle" placeholder="Titre du user..." />
-    <button @onclick="CreateUser" class="btn btn-primary">Ajouter</button>
-</div> *@
+    <div class="card shadow-sm border-0 mb-5">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Ajouter un nouvel utilisateur</h5>
+        </div>
+        <div class="card-body bg-light">
+            <div class="row g-3">
+                <div class="col-md-12">
+                    <label class="form-label fw-bold">Nom d'utilisateur (Username)</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person-plus"></i></span>
+                        <input @bind="newUser.Username" class="form-control shadow-sm" placeholder="Ex: JeanDupont" />
+                    </div>
+                </div>
+                <div class="col-12 text-end">
+                    <button @onclick="CreateUser" class="btn btn-success px-4 shadow">
+                        <i class="bi bi-plus-circle"></i> Créer l'utilisateur
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-@if (usersList == null) 
-{
-    <p>Chargement...</p>
-}
-else
-{
-    <ul class="list-group">
-        @foreach (var user in usersList)
-        {
-            <li class="list-group-item">@user.Title (ID: @user.Id)</li>
-        }
-    </ul>
-}
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            @if (usersList == null)
+            {
+                <div class="p-5 text-center">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <p class="mt-2">Chargement des utilisateurs...</p>
+                </div>
+            }
+            else if (!usersList.Any())
+            {
+                <div class="alert alert-info m-3">Aucun utilisateur trouvé en base de données.</div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="ps-3">ID</th>
+                                <th>Nom d'utilisateur</th>
+                                <th>Date de création</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var user in usersList)
+                            {
+                                <tr>
+                                    <td class="ps-3 fw-bold">#@user.Id</td>
+                                    <td>
+                                        <div class="fw-bold text-dark">@user.Username</div>
+                                    </td>
+                                    <td>
+                                        <small class="text-muted">
+                                            <i class="bi bi-calendar3"></i> @user.CreatedAt.ToString("dd/MM/yyyy HH:mm")
+                                        </small>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-outline-danger btn-sm" @onclick="() => DeleteUser(user.Id)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>
 
 @code {
-    private List<UserDto>? usersList; 
-    private string newUserName = "";
+    private List<UserDto>? usersList;
+    private CreateUserDto newUser = new();
 
     protected override async Task OnInitializedAsync() => await LoadUsers();
 
-    private async Task LoadUsers() => 
-        usersList = await Http.GetFromJsonAsync<List<UserDto>>("api/Users");
+    private async Task LoadUsers()
+    {
+        try
+        {
+            usersList = await Http.GetFromJsonAsync<List<UserDto>>("api/users");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erreur lors du chargement : {ex.Message}");
+        }
+    }
 
     private async Task CreateUser()
     {
-        var dto = new CreateUserDto(newUserName, "email@test.com"); 
-        
-        await Http.PostAsJsonAsync("api/Users", dto);
-        newUserName = "";
-        await LoadUsers();
+        if (string.IsNullOrWhiteSpace(newUser.Username)) return;
+
+        try
+        {
+            var response = await Http.PostAsJsonAsync("api/users", newUser);
+            if (response.IsSuccessStatusCode)
+            {
+                newUser = new CreateUserDto(); 
+                await LoadUsers();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erreur lors de la création : {ex.Message}");
+        }
+    }
+
+    private async Task DeleteUser(int id)
+    {
+        try
+        {
+            var response = await Http.DeleteAsync($"api/users/{id}");
+            if (response.IsSuccessStatusCode)
+            {
+                await LoadUsers();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erreur lors de la suppression : {ex.Message}");
+        }
     }
 }

@@ -1,6 +1,4 @@
-public record CreateUserDto (
-    string Username,
-    string Object,
-    string Content,
-    int Priority
-);
+public class CreateUserDto 
+{
+    public string Username { get; set; } = string.Empty;
+}

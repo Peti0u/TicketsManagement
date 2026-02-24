@@ -1,8 +1,7 @@
 namespace ServiceRequest.Application.Dtos;
 
-public record UpdateUserDto (
-    string Username,
-    string Object,
-    string Content,
-    int Priority
-);
+public class UpdateUserDto
+{
+    public int Id { get; set; }
+    public string Username { get; set; } = string.Empty;
+}
