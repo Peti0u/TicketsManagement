@@ -3844,24 +3844,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Quent\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\mathis\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\ServiceRequest.Infrastructure\\ServiceRequest.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\ServiceRequest.Infrastructure\\ServiceRequest.Infrastructure.csproj",
       "projectName": "ServiceRequest.Infrastructure",
-      "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\ServiceRequest.Infrastructure\\ServiceRequest.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Quent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\ServiceRequest.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\ServiceRequest.Infrastructure\\ServiceRequest.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\mathis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\ServiceRequest.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Quent\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\mathis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3875,11 +3870,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\ServiceRequest.Application\\ServiceRequest.Application.csproj": {
-              "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\ServiceRequest.Application\\ServiceRequest.Application.csproj"
+            "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\ServiceRequest.Application\\ServiceRequest.Application.csproj": {
+              "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\ServiceRequest.Application\\ServiceRequest.Application.csproj"
             },
-            "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\ServiceRequest.Domain\\ServiceRequest.Domain.csproj": {
-              "projectPath": "C:\\Users\\Quent\\OneDrive\\Desktop\\Estiam\\E2\\2DOT\\src\\ServiceRequest.Domain\\ServiceRequest.Domain.csproj"
+            "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\ServiceRequest.Domain\\ServiceRequest.Domain.csproj": {
+              "projectPath": "C:\\Users\\mathis\\Documents\\TicketsManagement\\src\\ServiceRequest.Domain\\ServiceRequest.Domain.csproj"
             }
           }
         }
