@@ -7,8 +7,8 @@ C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\bin\Debug\
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\bin\Debug\net10.0\appsettings.json
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\bin\Debug\net10.0\ServiceRequest.API.staticwebassets.endpoints.json
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\bin\Debug\net10.0\ServiceRequest.API.exe
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\servicerequest.api\bin\Debug\net10.0\ServiceRequest.API.deps.json
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\servicerequest.api\bin\Debug\net10.0\ServiceRequest.API.runtimeconfig.json
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\bin\Debug\net10.0\ServiceRequest.API.deps.json
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\bin\Debug\net10.0\ServiceRequest.API.runtimeconfig.json
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\bin\Debug\net10.0\ServiceRequest.API.dll
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\bin\Debug\net10.0\ServiceRequest.API.pdb
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\bin\Debug\net10.0\Azure.Core.dll
@@ -178,9 +178,9 @@ C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\servicerequest.api\obj\Debug\net10.0\ServiceR.2122A8FD.Up2Date
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\net10.0\ServiceR.2122A8FD.Up2Date
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\net10.0\ServiceRequest.API.dll
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\net10.0\refint\ServiceRequest.API.dll
 C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\net10.0\ServiceRequest.API.pdb
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\servicerequest.api\obj\Debug\net10.0\ServiceRequest.API.genruntimeconfig.cache
-C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\servicerequest.api\obj\Debug\net10.0\ref\ServiceRequest.API.dll
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\net10.0\ServiceRequest.API.genruntimeconfig.cache
+C:\Users\Quent\OneDrive\Desktop\Estiam\E2\2DOT\src\ServiceRequest.API\obj\Debug\net10.0\ref\ServiceRequest.API.dll

@@ -4,9 +4,13 @@ namespace ServiceRequest.Application.Interfaces;
 
 public interface ITicketsService
 {
-    Task<List<TicketsDto>> GetAllAsync();
-    Task<TicketsDto?> GetByIdAsync(int id);
-    Task<(bool Ok, string Error, TicketsDto? Created)> CreateAsync(CreateTicketsDto dto);
-    Task<(bool Ok, string Error, TicketsDto? Updated)> UpdateAsync(int id, UpdateTicketsDto dto);
+    Task<List<TicketDto>> GetAllAsync();
+    
+    Task<TicketDto?> GetByIdAsync(int id);
+    
+    Task<TicketDto> CreateAsync(CreateTicketDto dto);
+    
+    Task<TicketDto?> UpdateAsync(int id, UpdateTicketDto dto);
+    
     Task<bool> DeleteAsync(int id);
 }

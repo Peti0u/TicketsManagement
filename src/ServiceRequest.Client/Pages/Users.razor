@@ -1,0 +1,44 @@
+@page "/users"
+@inject HttpClient Http
+@using ServiceRequest.Application.Dtos
+
+<h3>Gestion des Users</h3>
+
+@* Formulaire d'ajout
+<div class="mb-4">
+    <input @bind="newUserTitle" placeholder="Titre du user..." />
+    <button @onclick="CreateUser" class="btn btn-primary">Ajouter</button>
+</div> *@
+
+@if (usersList == null) 
+{
+    <p>Chargement...</p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var user in usersList)
+        {
+            <li class="list-group-item">@user.Title (ID: @user.Id)</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<UserDto>? usersList; 
+    private string newUserName = "";
+
+    protected override async Task OnInitializedAsync() => await LoadUsers();
+
+    private async Task LoadUsers() => 
+        usersList = await Http.GetFromJsonAsync<List<UserDto>>("api/Users");
+
+    private async Task CreateUser()
+    {
+        var dto = new CreateUserDto(newUserName, "email@test.com"); 
+        
+        await Http.PostAsJsonAsync("api/Users", dto);
+        newUserName = "";
+        await LoadUsers();
+    }
+}

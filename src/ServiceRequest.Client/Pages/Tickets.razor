@@ -1,0 +1,201 @@
+@page "/tickets"
+@inject HttpClient Http
+@using ServiceRequest.Application.Dtos
+
+<h3>Gestion des Tickets</h3>
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="text-primary"><i class="bi bi-ticket-perforated"></i> Gestion des Tickets</h3>
+        <span class="badge bg-secondary">Tickets au total</span>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-5">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">Ouvrir un nouveau ticket</h5>
+        </div>
+        <div class="card-body bg-light">
+            <div class="row g-3">
+                <div class="col-md-12">
+                    <label class="form-label fw-bold">Objet du problème</label>
+                    <input @bind="newTicket.Object" class="form-control shadow-sm" placeholder="Ex: Problème d'accès au réseau" />
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label fw-bold">Description détaillée</label>
+                    <textarea @bind="newTicket.Content" class="form-control shadow-sm" rows="3" placeholder="Décrivez votre problème ici..."></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">Priorité (1 à 5)</label>
+                    <select @bind="newTicket.Priority" class="form-select shadow-sm">
+                        <option value="1">1 - Très basse</option>
+                        <option value="2">2 - Basse</option>
+                        <option value="3">3 - Moyenne</option>
+                        <option value="4">4 - Haute</option>
+                        <option value="5">5 - Critique</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">ID Utilisateur</label>
+                    <input type="number" @bind="newTicket.UserId" class="form-control shadow-sm" />
+                </div>
+                <div class="col-12 text-end">
+                    <button @onclick="CreateTicket" class="btn btn-success px-4 shadow">
+                        <i class="bi bi-plus-circle"></i> Envoyer le Ticket
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            @if (tickets == null)
+            {
+                <div class="p-5 text-center">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <p class="mt-2">Chargement des données...</p>
+                </div>
+            }
+            else if (!tickets.Any())
+            {
+                <div class="alert alert-info m-3">Aucun ticket n'a été trouvé en base de données.</div>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="ps-3">ID</th>
+                                <th>Objet</th>
+                                <th>Priorité</th>
+                                <th>Statut</th>
+                                <th>User</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var t in tickets)
+                            {
+                                <tr>
+                                    <td class="ps-3 fw-bold">#@t.Id</td>
+                                    <td>
+                                        <div class="fw-bold">@t.Object</div>
+                                        <small class="text-muted text-truncate d-block" style="max-width: 250px;">@t.Content</small>
+                                    </td>
+                                    <td>
+                                        <span class="badge @GetPriorityClass(t.Priority)">
+                                            Prio @t.Priority
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="badge rounded-pill @GetStatusClass(t.Status)">
+                                            @t.Status
+                                        </span>
+                                    </td>
+                                    <td><i class="bi bi-person"></i> @t.UserId</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-outline-danger btn-sm" @onclick="() => DeleteTicket(t.Id)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<hr />
+
+@if (tickets == null)
+{
+    <p><em>Chargement des tickets...</em></p>
+}
+else if (!tickets.Any())
+{
+    <p>Aucun ticket trouvé.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Objet</th>
+                <th>Priorité</th>
+                <th>Statut</th>
+                <th>User ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var t in tickets)
+            {
+                <tr>
+                    <td>@t.Id</td>
+                    <td>@t.Object</td>
+                    <td><span class="badge bg-info text-dark">Prio: @t.Priority</span></td>
+                    <td>@t.Status</td>
+                    <td>@t.UserId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<TicketDto>? tickets;
+    private CreateTicketDto newTicket = new() { Priority = 3 };
+
+    protected override async Task OnInitializedAsync() => await LoadTickets();
+
+    private async Task LoadTickets()
+    {
+        try 
+        {
+            tickets = await Http.GetFromJsonAsync<List<TicketDto>>("api/Tickets");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erreur : {ex.Message}");
+        }
+    }
+
+    private async Task CreateTicket()
+    {
+        if (string.IsNullOrWhiteSpace(newTicket.Object)) return;
+
+        var response = await Http.PostAsJsonAsync("api/Tickets", newTicket);
+        if (response.IsSuccessStatusCode)
+        {
+            newTicket = new CreateTicketDto() { Priority = 3 }; 
+            await LoadTickets();
+        }
+    }
+
+    private async Task DeleteTicket(int id)
+    {
+        var response = await Http.DeleteAsync($"api/Tickets/{id}");
+        if (response.IsSuccessStatusCode)
+        {
+            await LoadTickets();
+        }
+    }
+
+    // Helpers pour le design
+    private string GetPriorityClass(int p) => p switch {
+        >= 4 => "bg-danger",
+        3 => "bg-warning text-dark",
+        _ => "bg-info text-dark"
+    };
+
+    private string GetStatusClass(string s) => s?.ToLower() switch {
+        "pending" or "attente" => "bg-warning text-dark",
+        "open" or "ouvert" => "bg-primary",
+        "closed" or "fermé" => "bg-success",
+        _ => "bg-secondary"
+    };
+}

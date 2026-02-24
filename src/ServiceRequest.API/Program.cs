@@ -1,45 +1,58 @@
 using Microsoft.EntityFrameworkCore;
 using ServiceRequest.Application.Interfaces;
-using ServiceRequest.Infrastructure.Data;    
-using ServiceRequest.Infrastructure.Repositories; 
-using ServiceRequest.Service.Services;     
+using ServiceRequest.Application.Services; // Corrigé : pointe vers Application.Services
+using ServiceRequest.Infrastructure.Data;
+using ServiceRequest.Infrastructure.Repositories;
 using ServiceRequest.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// --- Services ---
+// --- SERVICES ---
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(); 
+builder.Services.AddSwaggerGen();
 
-// Configuration de la base de données SQL Server (Docker)
+// Configuration de la Base de données
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-// --- Injection des dépendances ---
-
-// Repository et Service pour les Tickets
+// --- INJECTION DE DÉPENDANCES (CORRIGÉE) ---
+// Tickets
 builder.Services.AddScoped<ITicketsRepository, TicketsRepository>();
-builder.Services.AddScoped<ITicketsService, TicketsService>(); 
+builder.Services.AddScoped<ITicketsService, TicketsService>(); // CORRECTION ICI : Interface -> Classe
 
-// Repository et Service pour les Users
-// IMPORTANT : L'absence de IUserRepository causait l'erreur d'exécution
+// Users (Vérifie que UserService existe bien dans ton dossier Services)
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
+// builder.Services.AddScoped<IUserService, UserService>(); 
+
+// --- CONFIGURATION CORS ---
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
 
-// --- Middleware & Routes ---
+// --- MIDDLEWARES ---
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+// L'ordre est important : Routing -> Cors -> Endpoints
+app.UseRouting();
+app.UseCors("AllowAll");
+
 app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
 
-// Enregistrement de tes endpoints (Minimal API)
+// --- ROUTES ---
 app.MapTicketsEndpoints();
-app.MapUsersEndpoints(); 
+app.MapUsersEndpoints();
 
 app.Run();

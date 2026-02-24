@@ -1,7 +1,12 @@
 namespace ServiceRequest.Application.Dtos;
 
-public record TicketsDto(int Id, string Title, string Description, string Status);
-
-public record CreateTicketsDto(string Title, string Description);
-
-public record UpdateTicketsDto(string Title, string Description);
+public class TicketDto
+{
+    public int Id { get; set; }
+    public string Object { get; set; } = string.Empty;
+    public string Content { get; set; } = string.Empty;
+    public int Priority { get; set; }
+    public string Status { get; set; } = string.Empty;
+    public DateTime CreatedAt { get; set; }
+    public int UserId { get; set; }
+}
