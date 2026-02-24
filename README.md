@@ -72,5 +72,5 @@ dotnet run
 ```
 - Open your web browser and navigate to the local URL provided in the console output to interact with the user interface. Ensure the API is running simultaneously so the client can fetch and modify data successfully.
 
-## Google Drive Link
+## One Drive Link
 https://1drv.ms/f/c/b784f24557a4bf9d/IgCtQWVf3FGIRIq6yFIOY7avAc1ENv2ZdB7iK4RwL6OB44U?e=NlErgo
